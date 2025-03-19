@@ -43,7 +43,7 @@ jobs:
         uses: pulumi/actions@v6
         with:
           command: up
-          stack-name: rocketseat.iac/stg
+          stack-name: stg
           comment-on-pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           cloud-url: s3://rocketseat-ftr-pulumi-state
@@ -51,3 +51,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
           AWS_REGION: ${{secrets.AWS_REGION}}
           AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          PULUMI_CONFIG_PASSPHRASE: ''
