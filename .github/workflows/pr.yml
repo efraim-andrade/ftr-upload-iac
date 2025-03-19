@@ -44,8 +44,6 @@ jobs:
         with:
           command: preview
           stack-name: stg
-          comment-on-pr: true
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           cloud-url: s3://rocketseat-ftr-pulumi-state
         env:
           AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
