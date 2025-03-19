@@ -1,0 +1,200 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2025-03-19T11:37:38.514932891Z",
+            "magic": "2bfb79d45993586c03ce258c687d47a13bf93903561a7c3f0e19d5464b24a284",
+            "version": "v3.154.0"
+        },
+        "secrets_providers": {
+            "type": "service",
+            "state": {
+                "url": "https://api.pulumi.com",
+                "owner": "efraim-andrade",
+                "project": "iac",
+                "stack": "stg"
+            }
+        },
+        "metadata": {},
+        "resources": [
+            {
+                "urn": "urn:pulumi:stg::iac::pulumi:pulumi:Stack::iac-stg",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "outputs": {
+                    "ecrName": "pos-rocketseat-first-ecr",
+                    "ecrRepositoryUrl": "911691676533.dkr.ecr.us-east-2.amazonaws.com/pos-rocketseat-first-ecr",
+                    "firstBucketArn": "arn:aws:s3:::pos-rocketseat-first-bucket",
+                    "firstBucketInfo": "pos-rocketseat-first-bucket",
+                    "firstBucketName": "pos-rocketseat-first-bucket"
+                },
+                "created": "2025-03-18T12:02:15.121971636Z",
+                "modified": "2025-03-18T12:02:15.121971636Z",
+                "sourcePosition": "project:///node_modules/.pnpm/@pulumi+pulumi@3.157.0_typescript@5.8.2/node_modules/@pulumi/runtime/stack.ts#38,23"
+            },
+            {
+                "urn": "urn:pulumi:stg::iac::pulumi:providers:aws::default_6_72_0",
+                "custom": true,
+                "id": "7637aba8-3a45-4dbb-8f1c-1932747ae2b2",
+                "type": "pulumi:providers:aws",
+                "inputs": {
+                    "__internal": {},
+                    "region": "us-east-2",
+                    "skipCredentialsValidation": "false",
+                    "skipRegionValidation": "true",
+                    "version": "6.72.0"
+                },
+                "outputs": {
+                    "region": "us-east-2",
+                    "skipCredentialsValidation": "false",
+                    "skipRegionValidation": "true",
+                    "version": "6.72.0"
+                },
+                "created": "2025-03-18T12:02:20.615357224Z",
+                "modified": "2025-03-18T12:02:20.615357224Z"
+            },
+            {
+                "urn": "urn:pulumi:stg::iac::aws:ecr/repository:Repository::pos-rocketseat-first-ecr",
+                "custom": true,
+                "id": "pos-rocketseat-first-ecr",
+                "type": "aws:ecr/repository:Repository",
+                "inputs": {
+                    "__defaults": [],
+                    "imageTagMutability": "IMMUTABLE",
+                    "name": "pos-rocketseat-first-ecr",
+                    "tags": {
+                        "IAC": "true"
+                    },
+                    "tagsAll": {
+                        "IAC": "true"
+                    }
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"delete\":1200000000000}}",
+                    "arn": "arn:aws:ecr:us-east-2:911691676533:repository/pos-rocketseat-first-ecr",
+                    "encryptionConfigurations": [
+                        {
+                            "encryptionType": "AES256",
+                            "kmsKey": ""
+                        }
+                    ],
+                    "forceDelete": null,
+                    "id": "pos-rocketseat-first-ecr",
+                    "imageScanningConfiguration": {
+                        "scanOnPush": false
+                    },
+                    "imageTagMutability": "IMMUTABLE",
+                    "name": "pos-rocketseat-first-ecr",
+                    "registryId": "911691676533",
+                    "repositoryUrl": "911691676533.dkr.ecr.us-east-2.amazonaws.com/pos-rocketseat-first-ecr",
+                    "tags": {
+                        "IAC": "true"
+                    },
+                    "tagsAll": {
+                        "IAC": "true"
+                    }
+                },
+                "parent": "urn:pulumi:stg::iac::pulumi:pulumi:Stack::iac-stg",
+                "provider": "urn:pulumi:stg::iac::pulumi:providers:aws::default_6_72_0::7637aba8-3a45-4dbb-8f1c-1932747ae2b2",
+                "propertyDependencies": {
+                    "imageTagMutability": [],
+                    "name": [],
+                    "tags": []
+                },
+                "created": "2025-03-18T12:02:21.391688265Z",
+                "modified": "2025-03-18T12:02:21.391688265Z",
+                "sourcePosition": "project:///index.ts#17,13"
+            },
+            {
+                "urn": "urn:pulumi:stg::iac::aws:s3/bucketV2:BucketV2::pos-rocketseat-first-bucket",
+                "custom": true,
+                "id": "pos-rocketseat-first-bucket",
+                "type": "aws:s3/bucketV2:BucketV2",
+                "inputs": {
+                    "__defaults": [
+                        "forceDestroy"
+                    ],
+                    "bucket": "pos-rocketseat-first-bucket",
+                    "forceDestroy": false,
+                    "tags": {
+                        "IAC": "true"
+                    },
+                    "tagsAll": {
+                        "IAC": "true"
+                    }
+                },
+                "outputs": {
+                    "__meta": "{\"e2bfb730-ecaa-11e6-8f88-34363bc7c4c0\":{\"create\":1200000000000,\"delete\":3600000000000,\"read\":1200000000000,\"update\":1200000000000}}",
+                    "accelerationStatus": "",
+                    "acl": null,
+                    "arn": "arn:aws:s3:::pos-rocketseat-first-bucket",
+                    "bucket": "pos-rocketseat-first-bucket",
+                    "bucketDomainName": "pos-rocketseat-first-bucket.s3.amazonaws.com",
+                    "bucketPrefix": "",
+                    "bucketRegionalDomainName": "pos-rocketseat-first-bucket.s3.us-east-2.amazonaws.com",
+                    "corsRules": [],
+                    "forceDestroy": false,
+                    "grants": [
+                        {
+                            "id": "755cb4b1ed81b18093ee462278e6531060d19e46a207e791432d96e6ecb20acb",
+                            "permissions": [
+                                "FULL_CONTROL"
+                            ],
+                            "type": "CanonicalUser",
+                            "uri": ""
+                        }
+                    ],
+                    "hostedZoneId": "Z2O1EMRO9K5GLX",
+                    "id": "pos-rocketseat-first-bucket",
+                    "lifecycleRules": [],
+                    "loggings": [],
+                    "objectLockConfiguration": null,
+                    "objectLockEnabled": false,
+                    "policy": "",
+                    "region": "us-east-2",
+                    "replicationConfigurations": [],
+                    "requestPayer": "BucketOwner",
+                    "serverSideEncryptionConfigurations": [
+                        {
+                            "rules": [
+                                {
+                                    "applyServerSideEncryptionByDefaults": [
+                                        {
+                                            "kmsMasterKeyId": "",
+                                            "sseAlgorithm": "AES256"
+                                        }
+                                    ],
+                                    "bucketKeyEnabled": false
+                                }
+                            ]
+                        }
+                    ],
+                    "tags": {
+                        "IAC": "true"
+                    },
+                    "tagsAll": {
+                        "IAC": "true"
+                    },
+                    "versionings": [
+                        {
+                            "enabled": false,
+                            "mfaDelete": false
+                        }
+                    ],
+                    "websiteDomain": null,
+                    "websiteEndpoint": null,
+                    "websites": []
+                },
+                "parent": "urn:pulumi:stg::iac::pulumi:pulumi:Stack::iac-stg",
+                "provider": "urn:pulumi:stg::iac::pulumi:providers:aws::default_6_72_0::7637aba8-3a45-4dbb-8f1c-1932747ae2b2",
+                "propertyDependencies": {
+                    "bucket": [],
+                    "tags": []
+                },
+                "created": "2025-03-18T12:02:22.33880158Z",
+                "modified": "2025-03-18T12:02:22.33880158Z",
+                "sourcePosition": "project:///index.ts#3,21"
+            }
+        ]
+    }
+}
